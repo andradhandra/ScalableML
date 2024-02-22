@@ -1,8 +1,11 @@
-from pyspark.sql import SparkSession, Row
+from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
 from pyspark.ml.linalg import Vectors
 from pyspark.ml.regression import LinearRegression
 from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml import Pipeline
+from pyspark.ml.classification import LogisticRegression
+from pyspark.ml.feature import HashingTF, Tokenizer
 
 spark = SparkSession.builder \
     .master("local[4]") \
@@ -123,6 +126,53 @@ print("Root Mean Squared Error (RMSE) on test data with Ridge Regression = %g" %
 
 rmse3 = evaluator.evaluate(predictions3)
 print("Root Mean Squared Error (RMSE) on test data with LASSO Regression = %g" % rmse3)
+print()
+
+## Clssification Pipeline
+print("Classification Pipeline")
+print("=======================")
+
+training = spark.createDataFrame([
+    (0, "a b c d e spark 6012", 1.0),
+    (1, "b d", 0.0),
+    (2, "spark f g h 6012", 1.0),
+    (3, "hadoop mapreduce", 0.0)
+], ["id", "text", "label"])
+
+print("Training Data")
+training.show()
+      
+tokenizer = Tokenizer(inputCol="text", outputCol="words")
+hashingTF = HashingTF(inputCol=tokenizer.getOutputCol(), outputCol="features")
+logReg = LogisticRegression(maxIter=10, regParam=0.001)
+pipeline = Pipeline(stages=[tokenizer, hashingTF, logReg])
+
+# Model Fitting
+model = pipeline.fit(training)
+
+test = spark.createDataFrame([
+    (4, "spyspark hadoop"),
+    (5, "spark a b c"),
+    (6, "mapreduce spark"),
+], ["id", "text"])
+
+print("Test Data")
+test.show()
+
+prediction = model.transform(test)
+print("Showing Prediction")
+prediction.show()
+
+selected = prediction.select("id", "text", "probability", "prediction")
+print("show Selected")
+selected.show()
+
+print("Result")
+for row in selected.collect():
+    rid, text, prob, prediction = row
+    print("(%d, %s) --> prob=%s, prediction=%f" % (rid, text, str(prob), prediction))
+
+
 ### End code
 
 spark.stop()

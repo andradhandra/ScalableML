@@ -1,0 +1,127 @@
+24/02/16 00:45:44 INFO SparkContext: Running Spark version 3.5.0
+24/02/16 00:45:44 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/16 00:45:44 INFO SparkContext: Java version 17.0.4
+24/02/16 00:45:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/02/16 00:45:44 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/02/16 00:45:44 INFO ResourceUtils: ==============================================================
+24/02/16 00:45:44 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/02/16 00:45:44 INFO ResourceUtils: ==============================================================
+24/02/16 00:45:44 INFO SparkContext: Submitted application: Lab 2 Exercise
+24/02/16 00:45:44 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/02/16 00:45:44 INFO ResourceProfile: Limiting resource is cpu
+24/02/16 00:45:44 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/02/16 00:45:44 INFO SecurityManager: Changing view acls to: ac1sz
+24/02/16 00:45:44 INFO SecurityManager: Changing modify acls to: ac1sz
+24/02/16 00:45:44 INFO SecurityManager: Changing view acls groups to: 
+24/02/16 00:45:44 INFO SecurityManager: Changing modify acls groups to: 
+24/02/16 00:45:44 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: ac1sz; groups with view permissions: EMPTY; users with modify permissions: ac1sz; groups with modify permissions: EMPTY
+24/02/16 00:45:44 INFO Utils: Successfully started service 'sparkDriver' on port 38913.
+24/02/16 00:45:44 INFO SparkEnv: Registering MapOutputTracker
+24/02/16 00:45:44 INFO SparkEnv: Registering BlockManagerMaster
+24/02/16 00:45:44 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/02/16 00:45:44 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/02/16 00:45:44 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/02/16 00:45:44 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/ac1sz/blockmgr-5660a42f-096b-4241-9830-849a3318c920
+24/02/16 00:45:44 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/02/16 00:45:44 INFO SparkEnv: Registering OutputCommitCoordinator
+24/02/16 00:45:44 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/02/16 00:45:44 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/02/16 00:45:44 INFO Executor: Starting executor ID driver on host node141.pri.stanage.alces.network
+24/02/16 00:45:44 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/16 00:45:44 INFO Executor: Java version 17.0.4
+24/02/16 00:45:44 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/02/16 00:45:44 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1b33737a for default.
+24/02/16 00:45:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34016.
+24/02/16 00:45:45 INFO NettyBlockTransferService: Server created on node141.pri.stanage.alces.network:34016
+24/02/16 00:45:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/02/16 00:45:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node141.pri.stanage.alces.network, 34016, None)
+24/02/16 00:45:45 INFO BlockManagerMasterEndpoint: Registering block manager node141.pri.stanage.alces.network:34016 with 434.4 MiB RAM, BlockManagerId(driver, node141.pri.stanage.alces.network, 34016, None)
+24/02/16 00:45:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node141.pri.stanage.alces.network, 34016, None)
+24/02/16 00:45:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node141.pri.stanage.alces.network, 34016, None)
+24/02/16 00:45:48 WARN CSVHeaderChecker: CSV header does not conform to the schema.
+ Header: , TV, radio, newspaper, sales
+ Schema: _c0, TV, radio, newspaper, sales
+Expected: _c0 but found: 
+CSV file: file:///users/ac1sz/com6012/ScalableML/Data/Advertising.csv
++---+-----+-----+---------+-----+
+|_c0|   TV|radio|newspaper|sales|
++---+-----+-----+---------+-----+
+|  1|230.1| 37.8|     69.2| 22.1|
+|  2| 44.5| 39.3|     45.1| 10.4|
+|  3| 17.2| 45.9|     69.3|  9.3|
+|  4|151.5| 41.3|     58.5| 18.5|
+|  5|180.8| 10.8|     58.4| 12.9|
+|  6|  8.7| 48.9|     75.0|  7.2|
+|  7| 57.5| 32.8|     23.5| 11.8|
+|  8|120.2| 19.6|     11.6| 13.2|
+|  9|  8.6|  2.1|      1.0|  4.8|
+| 10|199.8|  2.6|     21.2| 10.6|
+| 11| 66.1|  5.8|     24.2|  8.6|
+| 12|214.7| 24.0|      4.0| 17.4|
+| 13| 23.8| 35.1|     65.9|  9.2|
+| 14| 97.5|  7.6|      7.2|  9.7|
+| 15|204.1| 32.9|     46.0| 19.0|
+| 16|195.4| 47.7|     52.9| 22.4|
+| 17| 67.8| 36.6|    114.0| 12.5|
+| 18|281.4| 39.6|     55.8| 24.4|
+| 19| 69.2| 20.5|     18.3| 11.3|
+| 20|147.3| 23.9|     19.1| 14.6|
++---+-----+-----+---------+-----+
+only showing top 20 rows
+
+24/02/16 00:45:52 WARN Instrumentation: [6264f3fe] regParam is zero, which might cause numerical instability and overfitting.
+24/02/16 00:45:52 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+24/02/16 00:45:52 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+24/02/16 00:45:52 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.lapack.JNILAPACK
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+| [7.3,28.1,41.4]|  5.5| 8.651247373248497|
+| [7.8,38.9,50.6]|  6.6|10.784588382192853|
+| [8.7,48.9,75.0]|  7.2|12.996058595176583|
+|[11.7,36.9,45.2]|  7.3|10.524030440249168|
+|[16.9,43.7,89.4]|  8.7| 12.61551254301562|
++----------------+-----+------------------+
+only showing top 5 rows
+
+model reg param 0.0
+Root Mean Squared Error (RMSE) on test data = 1.8222
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+| [7.3,28.1,41.4]|  5.5|  8.76678065651505|
+| [7.8,38.9,50.6]|  6.6| 10.87459422166616|
+| [8.7,48.9,75.0]|  7.2|13.080139865179605|
+|[11.7,36.9,45.2]|  7.3|10.611282613894355|
+|[16.9,43.7,89.4]|  8.7|12.726385654480016|
++----------------+-----+------------------+
+only showing top 5 rows
+
+model reg param 0.1
+Root Mean Squared Error (RMSE) on test data = 1.82594
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+| [7.3,28.1,41.4]|  5.5| 8.877446494417255|
+| [7.8,38.9,50.6]|  6.6|10.960423566291414|
+| [8.7,48.9,75.0]|  7.2|13.159163972426454|
+|[11.7,36.9,45.2]|  7.3|10.694708702812525|
+|[16.9,43.7,89.4]|  8.7|12.830307138789172|
++----------------+-----+------------------+
+only showing top 5 rows
+
+model reg param 0.2
+Root Mean Squared Error (RMSE) on test data = 1.83288
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+| [7.3,28.1,41.4]|  5.5|   9.1832142120066|
+| [7.8,38.9,50.6]|  6.6|11.195474784617868|
+| [8.7,48.9,75.0]|  7.2|13.369511174995928|
+|[11.7,36.9,45.2]|  7.3|10.924341327326236|
+|[16.9,43.7,89.4]|  8.7|13.105584049745428|
++----------------+-----+------------------+
+only showing top 5 rows
+
+model reg param 0.5
+Root Mean Squared Error (RMSE) on test data = 1.8689

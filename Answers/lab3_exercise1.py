@@ -61,8 +61,7 @@ testData = spark.read.parquet('./Data/spamdata_test.parquet')
 # Create VectorAssembler to concatenate all features in a vector
 vecAssembler = VectorAssembler(inputCols = spam_names[0:ncolumns-1], outputCol = 'features')
 
-
-
+    
 ## Create L2 regularisation
 lrL2 = LogisticRegression(featuresCol='features', labelCol='labels', maxIter=50, regParam=0.01, elasticNetParam=0, family="binomial")
 

@@ -1,19 +1,13 @@
 from pyspark.sql import SparkSession
-import numpy as np
-from pyspark.sql.types import DoubleType
 from pyspark.ml import Pipeline
-import matplotlib 
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.ml.feature import VectorAssembler
 from pyspark.ml.classification import LogisticRegression
-from pyspark.ml.linalg import Vectors
-from pyspark.ml.tuning import CrossValidator, ParamGridBuilder, CrossValidatorModel
+from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
 
 spark = SparkSession.builder \
     .master("local[4]") \
-    .appName("Lab 3 Exercise 1") \
+    .appName("Lab 3 Exercise 2") \
     .config("spark.local.dir","/mnt/parscratch/users/acp23ra") \
     .getOrCreate()
 
@@ -25,47 +19,67 @@ print()
 ### Classification With CrossValidator
 print("=== Classification With CrossValidator ===")
 
-# Use saved training and testing data from file
+## Prepare and saperate training and testing data
+rawdata = spark.read.csv('./Data/spambase.data')
+rawdata.cache()
+ncolumns = len(rawdata.columns)
+spam_names = [spam_names.rstrip('\n') for spam_names in open('./Data/spambase.data.names')]
+
+# Split data to training and testing
+(trainingDatag, testDatag) = rawdata.randomSplit([0.7, 0.3], 42)
+
+# Save training and testing data to file
+trainingDatag.write.mode("overwrite").parquet('./Data/spamdata_training.parquet')
+testDatag.write.mode("overwrite").parquet('./Data/spamdata_test.parquet')
 trainingData = spark.read.parquet('./Data/spamdata_training.parquet')
 testData = spark.read.parquet('./Data/spamdata_test.parquet')
 
+# Create VectorAssembler to concatenate all features in a vector
+vecAssembler = VectorAssembler(inputCols = spam_names[0:ncolumns-1], outputCol = 'features')
 
-
-## Init Logisitic Regression
-lr = LogisticRegression(featuresCol='features', labelCol='labels')
-grid = ParamGridBuilder().addGrid(lr.maxIter, [0, 1]).build()
-evaluator = MulticlassClassificationEvaluator(labelCol="labels", predictionCol="prediction", metricName="accuracy")
-cv = CrossValidator(estimator=lr, estimatorParamMaps=grid, evaluator=evaluator, numFolds=5)
-cvModel = cv.fit(trainingData)
+    
+## Create regularisation instance
+lr = LogisticRegression()
 
 # Combine stages into pipeline and create pipeline model
-stageslrL2 = [vecAssembler, lrL2]
-pipelinelrL2 = Pipeline(stages=stageslrL2)
-pipelineModellrL2 = pipelinelrL2.fit(trainingData)
+stages = [vecAssembler, lr]
+pipeline = Pipeline(stages=stages)
 
-# Compute the accuracy
-predictionslrL2 = pipelineModellrL2.transform(testData)
-accuracylrL2 = evaluatorlrL2.evaluate(predictionslrL2)
+# Create ParamGrid Instance by combining multiple params from diffrent type of Logisitic Regression
+paramGrid = ParamGridBuilder() \
+            .baseOn({lr.labelCol: 'features'}) \
+            .baseOn({lr.labelCol: 'labels'}) \
+            .baseOn({lr.maxIter: 50}) \
+            .addGrid(lr.regParam, [0, 0.01, 0.01, 0.01]) \
+            .addGrid(lr.elasticNetParam, [0, 1, 0, 0.5]) \
+            .build()
 
-# Save vector w obtained without regularisation
-w_L2 = pipelineModellrL2.stages[-1].coefficients.values
+# Create evaluator instance            
+evaluator = MulticlassClassificationEvaluator(labelCol="labels", predictionCol="prediction", metricName="accuracy")
 
-# Find preferred features
-L2pref = spam_names[np.argmax(np.abs(w_L2))]
+# Create Crossvalidator Instance and embbeding the ParamGridBuilder
+crossval = CrossValidator(estimator=pipeline,
+                          estimatorParamMaps=paramGrid,
+                          evaluator=evaluator,
+                          numFolds=5)
 
-# Summary method to find accuracy
-lrModelL2 = pipelineModellrL2.stages[-1]
-sumAccL2 = lrModelL2.summary.accuracy
+# Run cross-validation, and choose the best set of parameters.
+cvModel = crossval.fit(trainingData)
+
+# Make predictions on test documents. cvModel uses the best model found (lrModel).
+prediction = cvModel.transform(testData)
+
+# Find accuracy
+accuracy = evaluator.evaluate(prediction)
 
 ## Compare results
-# Compare accuracy
-print("Logisitic Regression with L2 accuracy = %g " % accuracylrL2)
+# Show accuracy
+print("Accuracy = %g " % accuracy)
 
-# Compare preferred features
-print("L2 preffered features: %a" % L2pref)
-
-# Compare summary accuracy
-print("LRL2 summary accuracy = %g " % sumAccL2)
+# Make predictions on test documents. cvModel uses the best model found (lrModel).
+selected = prediction.select("id", "text", "probability", "prediction")
+for row in selected.collect():
+    print(row)
 
 # End code
 

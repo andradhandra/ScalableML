@@ -49,9 +49,9 @@ pipeline = Pipeline(stages=stages)
 paramGrid = ParamGridBuilder() \
             .baseOn({lr.labelCol: 'features'}) \
             .baseOn({lr.labelCol: 'labels'}) \
-            .baseOn({lr.maxIter: 50}) \
-            .addGrid(lr.regParam, [0, 0.01, 0.01, 0.01]) \
-            .addGrid(lr.elasticNetParam, [0, 1, 0, 0.5]) \
+            .addGrid(lr.maxIter, [50.0]) \
+            .addGrid(lr.regParam, [0.0, 0.01]) \
+            .addGrid(lr.elasticNetParam, [0.0, 0.5, 1.0]) \
             .build()
 
 # Create evaluator instance            

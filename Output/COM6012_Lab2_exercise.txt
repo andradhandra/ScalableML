@@ -1,0 +1,221 @@
+24/02/22 21:14:41 INFO SparkContext: Running Spark version 3.5.0
+24/02/22 21:14:41 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/22 21:14:41 INFO SparkContext: Java version 17.0.4
+24/02/22 21:14:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/02/22 21:14:42 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/02/22 21:14:42 INFO ResourceUtils: ==============================================================
+24/02/22 21:14:42 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/02/22 21:14:42 INFO ResourceUtils: ==============================================================
+24/02/22 21:14:42 INFO SparkContext: Submitted application: Lab 2 Exercise
+24/02/22 21:14:42 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/02/22 21:14:42 INFO ResourceProfile: Limiting resource is cpu
+24/02/22 21:14:42 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/02/22 21:14:42 INFO SecurityManager: Changing view acls to: acp23ra
+24/02/22 21:14:42 INFO SecurityManager: Changing modify acls to: acp23ra
+24/02/22 21:14:42 INFO SecurityManager: Changing view acls groups to: 
+24/02/22 21:14:42 INFO SecurityManager: Changing modify acls groups to: 
+24/02/22 21:14:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: acp23ra; groups with view permissions: EMPTY; users with modify permissions: acp23ra; groups with modify permissions: EMPTY
+24/02/22 21:14:42 INFO Utils: Successfully started service 'sparkDriver' on port 41529.
+24/02/22 21:14:42 INFO SparkEnv: Registering MapOutputTracker
+24/02/22 21:14:42 INFO SparkEnv: Registering BlockManagerMaster
+24/02/22 21:14:42 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/02/22 21:14:42 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/02/22 21:14:42 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/02/22 21:14:42 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/acp23ra/blockmgr-f0a9ce64-5279-4db6-b9b6-f563805c8c60
+24/02/22 21:14:42 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+24/02/22 21:14:42 INFO SparkEnv: Registering OutputCommitCoordinator
+24/02/22 21:14:43 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/02/22 21:14:43 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/02/22 21:14:43 INFO Executor: Starting executor ID driver on host node073.pri.stanage.alces.network
+24/02/22 21:14:43 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/22 21:14:43 INFO Executor: Java version 17.0.4
+24/02/22 21:14:43 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/02/22 21:14:43 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6676c4b2 for default.
+24/02/22 21:14:43 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41034.
+24/02/22 21:14:43 INFO NettyBlockTransferService: Server created on node073.pri.stanage.alces.network:41034
+24/02/22 21:14:43 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/02/22 21:14:43 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node073.pri.stanage.alces.network, 41034, None)
+24/02/22 21:14:43 INFO BlockManagerMasterEndpoint: Registering block manager node073.pri.stanage.alces.network:41034 with 413.9 MiB RAM, BlockManagerId(driver, node073.pri.stanage.alces.network, 41034, None)
+24/02/22 21:14:43 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node073.pri.stanage.alces.network, 41034, None)
+24/02/22 21:14:43 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node073.pri.stanage.alces.network, 41034, None)
+
+Nasa Log File DataFrame
+=======================
++---------------------------+---------------------------+------------------------------------------------------------+-------------+--------+
+|host                       |timestamp                  |request                                                     |response_code|bit_data|
++---------------------------+---------------------------+------------------------------------------------------------+-------------+--------+
+|in24.inetnebr.com          |[01/Aug/1995:00:00:01-0400]|"GET/shuttle/missions/sts-68/news/sts-68-mcc-05.txtHTTP/1.0"|200          |1839    |
+|uplherc.upl.com            |[01/Aug/1995:00:00:07-0400]|"GET/HTTP/1.0"                                              |304          |0       |
+|uplherc.upl.com            |[01/Aug/1995:00:00:08-0400]|"GET/images/ksclogo-medium.gifHTTP/1.0"                     |304          |0       |
+|uplherc.upl.com            |[01/Aug/1995:00:00:08-0400]|"GET/images/MOSAIC-logosmall.gifHTTP/1.0"                   |304          |0       |
+|uplherc.upl.com            |[01/Aug/1995:00:00:08-0400]|"GET/images/USA-logosmall.gifHTTP/1.0"                      |304          |0       |
+|ix-esc-ca2-07.ix.netcom.com|[01/Aug/1995:00:00:09-0400]|"GET/images/launch-logo.gifHTTP/1.0"                        |200          |1713    |
+|uplherc.upl.com            |[01/Aug/1995:00:00:10-0400]|"GET/images/WORLD-logosmall.gifHTTP/1.0"                    |304          |0       |
+|slppp6.intermind.net       |[01/Aug/1995:00:00:10-0400]|"GET/history/skylab/skylab.htmlHTTP/1.0"                    |200          |1687    |
+|piweba4y.prodigy.com       |[01/Aug/1995:00:00:10-0400]|"GET/images/launchmedium.gifHTTP/1.0"                       |200          |11853   |
+|slppp6.intermind.net       |[01/Aug/1995:00:00:11-0400]|"GET/history/skylab/skylab-small.gifHTTP/1.0"               |200          |9202    |
++---------------------------+---------------------------+------------------------------------------------------------+-------------+--------+
+only showing top 10 rows
+
+root
+ |-- host: string (nullable = true)
+ |-- timestamp: string (nullable = true)
+ |-- request: string (nullable = true)
+ |-- response_code: string (nullable = true)
+ |-- bit_data: string (nullable = true)
+
+
+
+Hello Spark: There are 1569366 unique data from the log file.
+
+Number of host visit
+====================
++--------------------+-----+
+|host                |count|
++--------------------+-----+
+|edams.ksc.nasa.gov  |6530 |
+|piweba4y.prodigy.com|4846 |
+|163.206.89.4        |4791 |
+|piweba5y.prodigy.com|4607 |
+|piweba3y.prodigy.com|4416 |
+|www-d1.proxy.aol.com|3889 |
+|www-b2.proxy.aol.com|3534 |
+|www-b3.proxy.aol.com|3463 |
+|www-c5.proxy.aol.com|3423 |
+|www-b5.proxy.aol.com|3411 |
+|www-c2.proxy.aol.com|3407 |
+|www-d2.proxy.aol.com|3404 |
+|www-a2.proxy.aol.com|3337 |
+|news.ti.com         |3298 |
+|www-d3.proxy.aol.com|3296 |
+|www-b4.proxy.aol.com|3293 |
+|www-c3.proxy.aol.com|3272 |
+|www-d4.proxy.aol.com|3234 |
+|www-c1.proxy.aol.com|3177 |
+|www-c4.proxy.aol.com|3134 |
++--------------------+-----+
+only showing top 20 rows
+
+
+
+Hello Spark: The most frequent visited host are edams.ksc.nasa.gov with 6530 visits.
+
+Regularisation
+=============
++-----------------+-----+
+|         features|label|
++-----------------+-----+
+|[230.1,37.8,69.2]| 22.1|
+| [44.5,39.3,45.1]| 10.4|
+| [17.2,45.9,69.3]|  9.3|
+|[151.5,41.3,58.5]| 18.5|
+|[180.8,10.8,58.4]| 12.9|
++-----------------+-----+
+only showing top 5 rows
+
+
+24/02/22 21:15:20 WARN Instrumentation: [180c472c] regParam is zero, which might cause numerical instability and overfitting.
+24/02/22 21:15:20 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+24/02/22 21:15:20 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+24/02/22 21:15:20 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.lapack.JNILAPACK
+No Regularisation Prediction
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+|  [0.7,39.6,8.7]|  1.6|10.497359087823323|
+| [7.3,28.1,41.4]|  5.5| 8.615626828376815|
+|  [8.4,27.2,2.1]|  5.7|  8.59859112486577|
+|   [8.6,2.1,1.0]|  4.8| 4.027845382391439|
+|[11.7,36.9,45.2]|  7.3| 10.41211129446484|
++----------------+-----+------------------+
+only showing top 5 rows
+
+
+24/02/22 21:15:22 WARN Instrumentation: [281b2ad0] regParam is zero, which might cause numerical instability and overfitting.
+Ordinary least squares Regression Prediction
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+|  [0.7,39.6,8.7]|  1.6|10.497359087823323|
+| [7.3,28.1,41.4]|  5.5| 8.615626828376815|
+|  [8.4,27.2,2.1]|  5.7|  8.59859112486577|
+|   [8.6,2.1,1.0]|  4.8| 4.027845382391439|
+|[11.7,36.9,45.2]|  7.3| 10.41211129446484|
++----------------+-----+------------------+
+only showing top 5 rows
+
+
+Ridge Regression Prediction
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+|  [0.7,39.6,8.7]|  1.6|10.497359087823323|
+| [7.3,28.1,41.4]|  5.5| 8.615626828376815|
+|  [8.4,27.2,2.1]|  5.7|  8.59859112486577|
+|   [8.6,2.1,1.0]|  4.8| 4.027845382391439|
+|[11.7,36.9,45.2]|  7.3| 10.41211129446484|
++----------------+-----+------------------+
+only showing top 5 rows
+
+
+LASSO Regression Prediction
++----------------+-----+------------------+
+|        features|label|        prediction|
++----------------+-----+------------------+
+|  [0.7,39.6,8.7]|  1.6|10.462921442735588|
+| [7.3,28.1,41.4]|  5.5|  8.74494100941584|
+|  [8.4,27.2,2.1]|  5.7| 8.636318929154026|
+|   [8.6,2.1,1.0]|  4.8|4.2578241073371546|
+|[11.7,36.9,45.2]|  7.3| 10.47790754110402|
++----------------+-----+------------------+
+only showing top 5 rows
+
+
+Evaluation
+Root Mean Squared Error (RMSE) on test data with no Regularisation = 1.87125
+Root Mean Squared Error (RMSE) on test data with Ordinary Least Squares Regression = 1.87125
+Root Mean Squared Error (RMSE) on test data with Ridge Regression = 1.88193
+Root Mean Squared Error (RMSE) on test data with LASSO Regression = 1.8908
+
+Classification Pipeline
+=======================
+Training Data
++---+--------------------+-----+
+| id|                text|label|
++---+--------------------+-----+
+|  0|a b c d e spark 6012|  1.0|
+|  1|                 b d|  0.0|
+|  2|    spark f g h 6012|  1.0|
+|  3|    hadoop mapreduce|  0.0|
++---+--------------------+-----+
+
+Test Data
++---+---------------+
+| id|           text|
++---+---------------+
+|  4|spyspark hadoop|
+|  5|    spark a b c|
+|  6|mapreduce spark|
++---+---------------+
+
+Showing Prediction
++---+---------------+------------------+--------------------+--------------------+--------------------+----------+
+| id|           text|             words|            features|       rawPrediction|         probability|prediction|
++---+---------------+------------------+--------------------+--------------------+--------------------+----------+
+|  4|spyspark hadoop|[spyspark, hadoop]|(262144,[198017,2...|[5.80789088699039...|[0.99700523688305...|       0.0|
+|  5|    spark a b c|  [spark, a, b, c]|(262144,[74920,10...|[-1.7448784731645...|[0.14869433732035...|       1.0|
+|  6|mapreduce spark|[mapreduce, spark]|(262144,[132966,1...|[2.91537569032564...|[0.94860129935421...|       0.0|
++---+---------------+------------------+--------------------+--------------------+--------------------+----------+
+
++---+---------------+--------------------+----------+
+| id|           text|         probability|prediction|
++---+---------------+--------------------+----------+
+|  4|spyspark hadoop|[0.99700523688305...|       0.0|
+|  5|    spark a b c|[0.14869433732035...|       1.0|
+|  6|mapreduce spark|[0.94860129935421...|       0.0|
++---+---------------+--------------------+----------+
+
+Result
+(4, spyspark hadoop) --> prob=[0.9970052368830581,0.002994763116941912], prediction=0.000000
+(5, spark a b c) --> prob=[0.1486943373203599,0.8513056626796401], prediction=1.000000
+(6, mapreduce spark) --> prob=[0.9486012993542122,0.051398700645787776], prediction=0.000000

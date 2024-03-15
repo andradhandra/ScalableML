@@ -1,0 +1,66 @@
+24/02/29 21:55:45 INFO SparkContext: Running Spark version 3.5.0
+24/02/29 21:55:45 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/29 21:55:45 INFO SparkContext: Java version 17.0.4
+24/02/29 21:55:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/02/29 21:55:45 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/02/29 21:55:45 INFO ResourceUtils: ==============================================================
+24/02/29 21:55:45 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/02/29 21:55:45 INFO ResourceUtils: ==============================================================
+24/02/29 21:55:45 INFO SparkContext: Submitted application: Lab 3 Exercise 2
+24/02/29 21:55:45 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/02/29 21:55:45 INFO ResourceProfile: Limiting resource is cpu
+24/02/29 21:55:45 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/02/29 21:55:45 INFO SecurityManager: Changing view acls to: acp23ra
+24/02/29 21:55:45 INFO SecurityManager: Changing modify acls to: acp23ra
+24/02/29 21:55:45 INFO SecurityManager: Changing view acls groups to: 
+24/02/29 21:55:45 INFO SecurityManager: Changing modify acls groups to: 
+24/02/29 21:55:45 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: acp23ra; groups with view permissions: EMPTY; users with modify permissions: acp23ra; groups with modify permissions: EMPTY
+24/02/29 21:55:45 INFO Utils: Successfully started service 'sparkDriver' on port 44286.
+24/02/29 21:55:45 INFO SparkEnv: Registering MapOutputTracker
+24/02/29 21:55:45 INFO SparkEnv: Registering BlockManagerMaster
+24/02/29 21:55:45 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/02/29 21:55:45 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/02/29 21:55:45 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/02/29 21:55:45 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/acp23ra/blockmgr-9c6551df-f9f2-425a-bef7-5cc6aa5702e6
+24/02/29 21:55:45 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/02/29 21:55:45 INFO SparkEnv: Registering OutputCommitCoordinator
+24/02/29 21:55:45 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/02/29 21:55:45 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/02/29 21:55:45 INFO Executor: Starting executor ID driver on host node148.pri.stanage.alces.network
+24/02/29 21:55:45 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/29 21:55:45 INFO Executor: Java version 17.0.4
+24/02/29 21:55:45 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/02/29 21:55:45 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1fba5aeb for default.
+24/02/29 21:55:45 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45636.
+24/02/29 21:55:45 INFO NettyBlockTransferService: Server created on node148.pri.stanage.alces.network:45636
+24/02/29 21:55:45 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/02/29 21:55:45 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node148.pri.stanage.alces.network, 45636, None)
+24/02/29 21:55:45 INFO BlockManagerMasterEndpoint: Registering block manager node148.pri.stanage.alces.network:45636 with 434.4 MiB RAM, BlockManagerId(driver, node148.pri.stanage.alces.network, 45636, None)
+24/02/29 21:55:45 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node148.pri.stanage.alces.network, 45636, None)
+24/02/29 21:55:45 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node148.pri.stanage.alces.network, 45636, None)
+
+=== Classification With CrossValidator ===
+24/02/29 21:55:48 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+Traceback (most recent call last):
+  File "/users/acp23ra/com6012/ScalableML/Code/Lab3_exercise2.py", line 67, in <module>
+    cvModel = crossval.fit(trainingData)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/base.py", line 205, in fit
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/tuning.py", line 847, in _fit
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/multiprocessing/pool.py", line 873, in next
+    raise value
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/tuning.py", line 847, in <lambda>
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/util.py", line 342, in wrapped
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/tuning.py", line 113, in singleTask
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/base.py", line 98, in __next__
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/base.py", line 156, in fitSingleModel
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/base.py", line 203, in fit
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/pipeline.py", line 132, in _fit
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/base.py", line 262, in transform
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/ml/wrapper.py", line 398, in _transform
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/py4j-0.10.9.7-src.zip/py4j/java_gateway.py", line 1322, in __call__
+  File "/users/acp23ra/.conda/envs/myspark/lib/python3.11/site-packages/pyspark/python/lib/pyspark.zip/pyspark/errors/exceptions/captured.py", line 185, in deco
+pyspark.errors.exceptions.captured.IllegalArgumentException: word_freq_make:         continuous. does not exist. Available: _c0, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c10, _c11, _c12, _c13, _c14, _c15, _c16, _c17, _c18, _c19, _c20, _c21, _c22, _c23, _c24, _c25, _c26, _c27, _c28, _c29, _c30, _c31, _c32, _c33, _c34, _c35, _c36, _c37, _c38, _c39, _c40, _c41, _c42, _c43, _c44, _c45, _c46, _c47, _c48, _c49, _c50, _c51, _c52, _c53, _c54, _c55, _c56, _c57, CrossValidator_e02eadb58d99_rand

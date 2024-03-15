@@ -1,0 +1,60 @@
+24/03/03 21:59:41 INFO SparkContext: Running Spark version 3.5.0
+24/03/03 21:59:41 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/03/03 21:59:41 INFO SparkContext: Java version 17.0.4
+24/03/03 21:59:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/03/03 21:59:41 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/03/03 21:59:41 INFO ResourceUtils: ==============================================================
+24/03/03 21:59:41 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/03/03 21:59:41 INFO ResourceUtils: ==============================================================
+24/03/03 21:59:41 INFO SparkContext: Submitted application: Lab 3 Exercise 2
+24/03/03 21:59:41 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/03/03 21:59:41 INFO ResourceProfile: Limiting resource is cpu
+24/03/03 21:59:41 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/03/03 21:59:41 INFO SecurityManager: Changing view acls to: acp23ra
+24/03/03 21:59:41 INFO SecurityManager: Changing modify acls to: acp23ra
+24/03/03 21:59:41 INFO SecurityManager: Changing view acls groups to: 
+24/03/03 21:59:41 INFO SecurityManager: Changing modify acls groups to: 
+24/03/03 21:59:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: acp23ra; groups with view permissions: EMPTY; users with modify permissions: acp23ra; groups with modify permissions: EMPTY
+24/03/03 21:59:41 INFO Utils: Successfully started service 'sparkDriver' on port 36342.
+24/03/03 21:59:41 INFO SparkEnv: Registering MapOutputTracker
+24/03/03 21:59:41 INFO SparkEnv: Registering BlockManagerMaster
+24/03/03 21:59:41 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/03/03 21:59:41 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/03/03 21:59:41 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/03/03 21:59:41 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/acp23ra/blockmgr-115826f8-d9bb-43da-8316-75f087aba2dd
+24/03/03 21:59:41 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/03/03 21:59:41 INFO SparkEnv: Registering OutputCommitCoordinator
+24/03/03 21:59:41 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/03/03 21:59:41 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/03/03 21:59:41 INFO Executor: Starting executor ID driver on host node102.pri.stanage.alces.network
+24/03/03 21:59:41 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/03/03 21:59:41 INFO Executor: Java version 17.0.4
+24/03/03 21:59:41 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/03/03 21:59:41 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6cd552a5 for default.
+24/03/03 21:59:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40999.
+24/03/03 21:59:41 INFO NettyBlockTransferService: Server created on node102.pri.stanage.alces.network:40999
+24/03/03 21:59:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/03/03 21:59:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node102.pri.stanage.alces.network, 40999, None)
+24/03/03 21:59:41 INFO BlockManagerMasterEndpoint: Registering block manager node102.pri.stanage.alces.network:40999 with 434.4 MiB RAM, BlockManagerId(driver, node102.pri.stanage.alces.network, 40999, None)
+24/03/03 21:59:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node102.pri.stanage.alces.network, 40999, None)
+24/03/03 21:59:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node102.pri.stanage.alces.network, 40999, None)
+
+=== Scalable GLM ===
+24/03/03 21:59:49 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+24/03/03 21:59:49 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+24/03/03 21:59:49 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.lapack.JNILAPACK
+24/03/03 21:59:49 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:50 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:51 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:51 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:51 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:51 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+24/03/03 21:59:52 WARN Instrumentation: [230f9bb3] Cholesky solver failed due to singular covariance matrix. Retrying with Quasi-Newton solver.
+RMSE of GLM poisson model ===> 94.6296 
+RMSE of lr1 auto ===> 101.757 
+RMSE of lr1 normal ===> 101.757 
+RMSE of lr2 auto ===> 101.766 
+RMSE of lr2 normal ===> 101.766 
+RMSE of lr2 l-bfgs ===> 101.77 
+RMSE of elastic net auto ===> 101.761 
+RMSE of elastic net normal ===> 101.761 

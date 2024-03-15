@@ -1,0 +1,53 @@
+24/02/09 23:04:54 INFO SparkContext: Running Spark version 3.5.0
+24/02/09 23:04:54 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/09 23:04:54 INFO SparkContext: Java version 17.0.4
+24/02/09 23:04:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/02/09 23:04:54 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/02/09 23:04:54 INFO ResourceUtils: ==============================================================
+24/02/09 23:04:54 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/02/09 23:04:54 INFO ResourceUtils: ==============================================================
+24/02/09 23:04:54 INFO SparkContext: Submitted application: COM6012 Spark Exercise 1
+24/02/09 23:04:54 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/02/09 23:04:54 INFO ResourceProfile: Limiting resource is cpu
+24/02/09 23:04:54 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/02/09 23:04:54 INFO SecurityManager: Changing view acls to: acp23ra
+24/02/09 23:04:54 INFO SecurityManager: Changing modify acls to: acp23ra
+24/02/09 23:04:54 INFO SecurityManager: Changing view acls groups to: 
+24/02/09 23:04:54 INFO SecurityManager: Changing modify acls groups to: 
+24/02/09 23:04:54 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: acp23ra; groups with view permissions: EMPTY; users with modify permissions: acp23ra; groups with modify permissions: EMPTY
+24/02/09 23:04:55 INFO Utils: Successfully started service 'sparkDriver' on port 34176.
+24/02/09 23:04:55 INFO SparkEnv: Registering MapOutputTracker
+24/02/09 23:04:55 INFO SparkEnv: Registering BlockManagerMaster
+24/02/09 23:04:55 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/02/09 23:04:55 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/02/09 23:04:55 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/02/09 23:04:55 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/acp23ra/blockmgr-ff7fb94c-732a-41ec-91cd-e0d5f3483821
+24/02/09 23:04:55 INFO MemoryStore: MemoryStore started with capacity 413.9 MiB
+24/02/09 23:04:55 INFO SparkEnv: Registering OutputCommitCoordinator
+24/02/09 23:04:55 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/02/09 23:04:55 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/02/09 23:04:55 INFO Executor: Starting executor ID driver on host node086.pri.stanage.alces.network
+24/02/09 23:04:55 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/09 23:04:55 INFO Executor: Java version 17.0.4
+24/02/09 23:04:55 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/02/09 23:04:55 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@3e42e0a9 for default.
+24/02/09 23:04:55 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40028.
+24/02/09 23:04:55 INFO NettyBlockTransferService: Server created on node086.pri.stanage.alces.network:40028
+24/02/09 23:04:55 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/02/09 23:04:55 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node086.pri.stanage.alces.network, 40028, None)
+24/02/09 23:04:55 INFO BlockManagerMasterEndpoint: Registering block manager node086.pri.stanage.alces.network:40028 with 413.9 MiB RAM, BlockManagerId(driver, node086.pri.stanage.alces.network, 40028, None)
+24/02/09 23:04:55 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node086.pri.stanage.alces.network, 40028, None)
+24/02/09 23:04:55 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node086.pri.stanage.alces.network, 40028, None)
+
+
+Lab 1 Exercise Answer
+=========================
+
+
+1. Total request: 1569898 requests.
+2. Total request from gateway.timken.com: 35 requests.
+3. Total request on 15th August 1995: 58847 requests.
+4. Total failed request (404 error code): 14750 requests.
+5. Total failed request on 15th August 1995: 496 requests.
+6. Total failed request on 15th August 1995 from gateway.timken.com: 3 requests.
+

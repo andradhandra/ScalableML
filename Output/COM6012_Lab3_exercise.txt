@@ -1,0 +1,51 @@
+24/02/26 16:27:15 INFO SparkContext: Running Spark version 3.5.0
+24/02/26 16:27:15 INFO SparkContext: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/26 16:27:15 INFO SparkContext: Java version 17.0.4
+24/02/26 16:27:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+24/02/26 16:27:15 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+24/02/26 16:27:15 INFO ResourceUtils: ==============================================================
+24/02/26 16:27:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+24/02/26 16:27:15 INFO ResourceUtils: ==============================================================
+24/02/26 16:27:15 INFO SparkContext: Submitted application: Lab 3 Exercise 1
+24/02/26 16:27:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+24/02/26 16:27:15 INFO ResourceProfile: Limiting resource is cpu
+24/02/26 16:27:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+24/02/26 16:27:15 INFO SecurityManager: Changing view acls to: acp23ra
+24/02/26 16:27:15 INFO SecurityManager: Changing modify acls to: acp23ra
+24/02/26 16:27:15 INFO SecurityManager: Changing view acls groups to: 
+24/02/26 16:27:15 INFO SecurityManager: Changing modify acls groups to: 
+24/02/26 16:27:15 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: acp23ra; groups with view permissions: EMPTY; users with modify permissions: acp23ra; groups with modify permissions: EMPTY
+24/02/26 16:27:15 INFO Utils: Successfully started service 'sparkDriver' on port 36368.
+24/02/26 16:27:15 INFO SparkEnv: Registering MapOutputTracker
+24/02/26 16:27:15 INFO SparkEnv: Registering BlockManagerMaster
+24/02/26 16:27:15 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+24/02/26 16:27:15 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+24/02/26 16:27:15 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+24/02/26 16:27:15 INFO DiskBlockManager: Created local directory at /mnt/parscratch/users/acp23ra/blockmgr-77ef8db9-bb65-4c4c-b937-5d3e2aa38110
+24/02/26 16:27:15 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+24/02/26 16:27:15 INFO SparkEnv: Registering OutputCommitCoordinator
+24/02/26 16:27:15 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+24/02/26 16:27:15 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+24/02/26 16:27:15 INFO Executor: Starting executor ID driver on host node054.pri.stanage.alces.network
+24/02/26 16:27:15 INFO Executor: OS info Linux, 3.10.0-1160.105.1.el7.x86_64, amd64
+24/02/26 16:27:15 INFO Executor: Java version 17.0.4
+24/02/26 16:27:15 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+24/02/26 16:27:15 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@1b33737a for default.
+24/02/26 16:27:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39085.
+24/02/26 16:27:15 INFO NettyBlockTransferService: Server created on node054.pri.stanage.alces.network:39085
+24/02/26 16:27:15 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+24/02/26 16:27:15 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, node054.pri.stanage.alces.network, 39085, None)
+24/02/26 16:27:15 INFO BlockManagerMasterEndpoint: Registering block manager node054.pri.stanage.alces.network:39085 with 434.4 MiB RAM, BlockManagerId(driver, node054.pri.stanage.alces.network, 39085, None)
+24/02/26 16:27:15 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, node054.pri.stanage.alces.network, 39085, None)
+24/02/26 16:27:15 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, node054.pri.stanage.alces.network, 39085, None)
+=== Classification Regularisation ===
+24/02/26 16:27:18 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+24/02/26 16:27:25 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+24/02/26 16:27:25 WARN InstanceBuilder: Failed to load implementation from:dev.ludovic.netlib.blas.VectorBLAS
+Logisitic Regression with L2 accuracy = 0.915461 
+Logisitic Regression with Elastic Net accuracy = 0.913176 
+Traceback (most recent call last):
+  File "/users/acp23ra/com6012/ScalableML/Code/Lab3_exercise1.py", line 120, in <module>
+    print("L2 preffered features: a%" % L2pref)
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+ValueError: incomplete format

@@ -1,3 +1,7 @@
 .ipynb_checkpoints
 _**.png
+<<<<<<< HEAD
 .DS_Store
+=======
+**.DS_Store
+>>>>>>> upstream/master

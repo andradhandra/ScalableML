@@ -10,7 +10,7 @@ from pyspark.ml.regression import LinearRegression
 spark = SparkSession.builder \
         .master("local[4]") \
         .appName("Lab 4 Exercise") \
-        .config("spark.local.dir","/mnt/parscratch/users/your_username"") \
+        .config("spark.local.dir","/mnt/parscratch/users/your_username") \
         .getOrCreate()
 sc = spark.sparkContext
 sc.setLogLevel("WARN")
@@ -64,7 +64,7 @@ pipelineModel = pipeline.fit(trainingData)
 
 # Evaluate the model RMSE on the test set
 predictions = pipelineModel.transform(testData)
-evaluator = RegressionEvaluator(labelCol="cnt", predictionCol="prediction", metricName="rmse")
+
 rmse = evaluator.evaluate(predictions)
 print("\nRMSE = %g \n" % rmse)
 

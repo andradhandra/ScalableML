@@ -1,0 +1,75 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+22/03/30 02:44:32 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/03/30 02:44:35 INFO SparkContext: Running Spark version 3.2.1
+22/03/30 02:44:35 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/03/30 02:44:35 INFO ResourceUtils: ==============================================================
+22/03/30 02:44:35 INFO ResourceUtils: Resources for spark.driver:
+
+22/03/30 02:44:35 INFO ResourceUtils: ==============================================================
+22/03/30 02:44:35 INFO SparkContext: Submitted application: Lab 6 Exercise
+22/03/30 02:44:35 INFO SecurityManager: Changing view acls to: acq18mc
+22/03/30 02:44:35 INFO SecurityManager: Changing modify acls to: acq18mc
+22/03/30 02:44:35 INFO SecurityManager: Changing view acls groups to: 
+22/03/30 02:44:35 INFO SecurityManager: Changing modify acls groups to: 
+22/03/30 02:44:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acq18mc); groups with view permissions: Set(); users  with modify permissions: Set(acq18mc); groups with modify permissions: Set()
+22/03/30 02:44:35 INFO Utils: Successfully started service 'sparkDriver' on port 40087.
+22/03/30 02:44:35 INFO SparkEnv: Registering MapOutputTracker
+22/03/30 02:44:35 INFO SparkEnv: Registering BlockManagerMaster
+22/03/30 02:44:35 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/03/30 02:44:35 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/03/30 02:44:35 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/03/30 02:44:35 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acq18mc/blockmgr-6f3da8ab-74e1-4619-a415-c9ab830c00f4
+22/03/30 02:44:35 INFO MemoryStore: MemoryStore started with capacity 408.9 MiB
+22/03/30 02:44:36 INFO SparkEnv: Registering OutputCommitCoordinator
+22/03/30 02:44:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+22/03/30 02:44:36 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4040
+22/03/30 02:44:36 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+22/03/30 02:44:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44017.
+22/03/30 02:44:36 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:44017
+22/03/30 02:44:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/03/30 02:44:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44017, None)
+22/03/30 02:44:36 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:44017 with 408.9 MiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 44017, None)
+22/03/30 02:44:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44017, None)
+22/03/30 02:44:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 44017, None)
+22/03/30 02:44:37 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/data/acq18mc/ScalableML/HPC/spark-warehouse').
+22/03/30 02:44:37 INFO SharedState: Warehouse path is 'file:/data/acq18mc/ScalableML/HPC/spark-warehouse'.
++------------+-----------+------------+-----------+-------+
+|sepal_length|sepal_width|petal_length|petal_width|species|
++------------+-----------+------------+-----------+-------+
+|5.1         |3.5        |1.4         |0.2        |setosa |
+|4.9         |3.0        |1.4         |0.2        |setosa |
+|4.7         |3.2        |1.3         |0.2        |setosa |
+|4.6         |3.1        |1.5         |0.2        |setosa |
+|5.0         |3.6        |1.4         |0.2        |setosa |
+|5.4         |3.9        |1.7         |0.4        |setosa |
+|4.6         |3.4        |1.4         |0.3        |setosa |
+|5.0         |3.4        |1.5         |0.2        |setosa |
+|4.4         |2.9        |1.4         |0.2        |setosa |
+|4.9         |3.1        |1.5         |0.1        |setosa |
+|5.4         |3.7        |1.5         |0.2        |setosa |
+|4.8         |3.4        |1.6         |0.2        |setosa |
+|4.8         |3.0        |1.4         |0.1        |setosa |
+|4.3         |3.0        |1.1         |0.1        |setosa |
+|5.8         |4.0        |1.2         |0.2        |setosa |
+|5.7         |4.4        |1.5         |0.4        |setosa |
+|5.4         |3.9        |1.3         |0.4        |setosa |
+|5.1         |3.5        |1.4         |0.3        |setosa |
+|5.7         |3.8        |1.7         |0.3        |setosa |
+|5.1         |3.8        |1.5         |0.3        |setosa |
++------------+-----------+------------+-----------+-------+
+only showing top 20 rows
+
+22/03/30 02:44:46 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+22/03/30 02:44:46 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+when K = 3, seed = 6012 NMI score is 0.5836576004415008
+with seed 10 NMI score is 0.7581756800057784
+with seed 15 NMI score is 0.7581756800057785
+with seed 20 NMI score is 0.7581756800057785
+with seed 25 NMI score is 0.7581756800057784
+with seed 30 NMI score is 0.7419116631817836
+with seed 35 NMI score is 0.7419116631817837
+with seed 40 NMI score is 0.7581756800057785
+with seed 45 NMI score is 0.7419116631817837
+with seed 50 NMI score is 0.7581756800057784

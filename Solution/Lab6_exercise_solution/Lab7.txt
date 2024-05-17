@@ -1,0 +1,47 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/23 19:45:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/23 19:45:42 INFO SparkContext: Running Spark version 3.0.1
+21/04/23 19:45:42 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/23 19:45:42 INFO ResourceUtils: ==============================================================
+21/04/23 19:45:42 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/23 19:45:42 INFO ResourceUtils: ==============================================================
+21/04/23 19:45:42 INFO SparkContext: Submitted application: Lab 9 Exercise
+21/04/23 19:45:42 INFO SecurityManager: Changing view acls to: acp18mah
+21/04/23 19:45:42 INFO SecurityManager: Changing modify acls to: acp18mah
+21/04/23 19:45:42 INFO SecurityManager: Changing view acls groups to: 
+21/04/23 19:45:42 INFO SecurityManager: Changing modify acls groups to: 
+21/04/23 19:45:42 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acp18mah); groups with view permissions: Set(); users  with modify permissions: Set(acp18mah); groups with modify permissions: Set()
+21/04/23 19:45:43 INFO Utils: Successfully started service 'sparkDriver' on port 41696.
+21/04/23 19:45:43 INFO SparkEnv: Registering MapOutputTracker
+21/04/23 19:45:43 INFO SparkEnv: Registering BlockManagerMaster
+21/04/23 19:45:43 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/23 19:45:43 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/23 19:45:43 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/23 19:45:43 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acp18mah/blockmgr-15acb745-fccc-4626-97ac-8f30959eb006
+21/04/23 19:45:43 INFO MemoryStore: MemoryStore started with capacity 408.9 MiB
+21/04/23 19:45:43 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/23 19:45:43 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+21/04/23 19:45:43 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+21/04/23 19:45:43 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+21/04/23 19:45:43 INFO Utils: Successfully started service 'SparkUI' on port 4043.
+21/04/23 19:45:43 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4043
+21/04/23 19:45:44 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+21/04/23 19:45:44 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 39465.
+21/04/23 19:45:44 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:39465
+21/04/23 19:45:44 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/23 19:45:44 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 39465, None)
+21/04/23 19:45:44 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:39465 with 408.9 MiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 39465, None)
+21/04/23 19:45:44 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 39465, None)
+21/04/23 19:45:44 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 39465, None)
+21/04/23 19:45:44 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acp18mah/COM6012/ScalableML/HPC/spark-warehouse').
+21/04/23 19:45:44 INFO SharedState: Warehouse path is 'file:/home/acp18mah/COM6012/ScalableML/HPC/spark-warehouse'.
+21/04/23 19:45:51 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+21/04/23 19:46:01 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/23 19:46:01 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/23 19:46:21 WARN BlockManager: Asked to remove block broadcast_647, which does not exist
+Accuracy = 0.859101 
+Best parameter for layers = [57, 40, 10, 2]
+Accuracy = 0.926123 
